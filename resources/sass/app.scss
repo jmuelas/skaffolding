@@ -1,0 +1,89 @@
+// Bulma
+@import '~bulma/bulma';
+
+@import '~font-awesome';
+
+html { 
+    background-color: #dbdbdb4f;
+/*    background-image: url('/images/skaffolding_foto.jpg');
+    background-position: center;
+    background-repeat:  no-repeat;
+    background-attachment: fixed;
+    background-size:  cover;*/
+ }
+ 
+.navbar { 
+    background-color: #ffed00;
+ }
+ 
+.navbar-item { 
+    color: #000000;
+    font-weight: bold;
+ }
+ 
+ #home-title {
+    text-align: center;
+    font-size: 70px;   
+    font-weight: bold;
+ }
+ #flamunky {
+     max-width: 100%;
+  
+ }
+ 
+ #home-container {
+     margin-top: 40px;
+ }
+ 
+#foto_index{
+  background-image:url("/images/skaffolding_foto_pce.jpg");
+  width:100%;
+  height:705px;
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-position: center;
+}
+
+#panel {
+    //background-color: #e6f788;
+    background-color: #fff;
+    opacity: 0.9;
+    color: #000000;
+    text-align: center;
+    padding-bottom: 25px;
+}
+
+#panel h1 {
+    text-align: center;
+    font-size: 45px;
+    font-style: oblique;
+}
+
+#panel img {
+    max-width: 50%;
+}
+
+#panel .message-header{
+    background-color: #ffed00;
+    color: #000000;
+}
+
+hr {
+    background-color: #8b008b;
+}
+
+#foto_bio{
+  background-image:url("/images/skaffolding_foto_cascorro.jpg");
+  width:100%;
+  height:705px;
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-position: center;
+}
+
+#media-section {
+    margin-top: 35px;
+}
+
+
+
