@@ -20,3 +20,6 @@ Route::get('/bio', function () {
 Route::get('/media', function () {
     return view('pages/media');
 });
+Route::get('/contacto', function () {
+    return view('pages/contacto');
+});
