@@ -50,8 +50,7 @@
                   <div class="control">
                   @if ($response == 1)
                     <span class="tag is-success is-large">El mensaje se ha enviado correctamente.</span>
-                  @endif
-                  @if ($response == 0)
+                  @elseif($response == 0)
                     <span class="tag is-danger is-large">Ha ocurrido algún problema durante el envío.</span>
                   @endif
                   </div>

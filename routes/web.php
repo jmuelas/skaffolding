@@ -21,6 +21,6 @@ Route::get('media', function () {
     return view('pages/media');
 });
 Route::get('contacto', function () {
-    return view('pages/contacto', ['response' => '','nombre' => '', 'email' => '', 'mensaje' => '']);
+    return view('pages/contacto', ['response' => -1,'nombre' => '', 'email' => '', 'mensaje' => '']);
 });
 Route::post('contacto', 'ContactoController@contactoByEmail');
