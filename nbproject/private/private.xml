@@ -7,10 +7,13 @@
             <file>file:/C:/xampp/htdocs/skaffolding/resources/views/index.blade.php</file>
             <file>file:/C:/xampp/htdocs/skaffolding/resources/views/layouts/menu.blade.php</file>
             <file>file:/C:/xampp/htdocs/skaffolding/resources/views/pages/biografia.blade.php</file>
+            <file>file:/C:/xampp/htdocs/skaffolding/app/Http/Controllers/ContactoController.php</file>
             <file>file:/C:/xampp/htdocs/skaffolding/resources/sass/app.scss</file>
             <file>file:/C:/xampp/htdocs/skaffolding/resources/views/includes/head.blade.php</file>
-            <file>file:/C:/xampp/htdocs/skaffolding/resources/views/pages/media.blade.php</file>
+            <file>file:/C:/xampp/htdocs/skaffolding/resources/views/pages/contacto.blade.php</file>
             <file>file:/C:/xampp/htdocs/skaffolding/routes/web.php</file>
+            <file>file:/C:/xampp/htdocs/skaffolding/resources/views/pages/media.blade.php</file>
+            <file>file:/C:/xampp/htdocs/skaffolding/app/Contacto.php</file>
             <file>file:/C:/xampp/htdocs/skaffolding/resources/views/index.blade_1.php</file>
         </group>
     </open-files>

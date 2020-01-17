@@ -14,11 +14,12 @@
               <p>
               Rellena el siguiente formulario, o contáctanos a través del email <strong><a href="mailto:skaffoldingrumba@gmail.com">skaffoldingrumba@gmail.com</a></strong>
               </p>
+              <form method="post" action="{{url('contacto')}}" >
               <div class="content" id="form-contacto">
                 <div class="field">
                   <label class="label">Nombre</label>
                   <div class="control has-icons-left has-icons-right">
-                    <input class="input" type="text" placeholder="Nombre">
+                    <input class="input" type="text" name="nombre" value="{{ $nombre ?? '' }}" placeholder="Introduce tu nombre" />
                     <span class="icon is-small is-left">
                       <i class="fa fa-user"></i>
                     </span>
@@ -27,7 +28,7 @@
                 <div class="field">
                   <label class="label">Email</label>
                   <div class="control has-icons-left has-icons-right">
-                    <input class="input" type="email" placeholder="Introduce un email">
+                    <input class="input" type="email" name="email" placeholder="Introduce tu email" value="{{ $email ?? '' }}">
                     <span class="icon is-small is-left">
                       <i class="fa fa-envelope"></i>
                     </span>
@@ -36,15 +37,17 @@
                 <div class="field">
                   <label class="label">Mensaje</label>
                   <div class="control">
-                    <textarea class="textarea" placeholder="Mensaje"></textarea>
+                     <textarea class="textarea" placeholder="Introduce tu mensaje" name="mensaje" value="{{ $mensaje ?? '' }}">{{ $mensaje ?? '' }}</textarea> 
                   </div>
                 </div>
                 <div class="field is-grouped">
                   <div class="control">
-                    <button class="button is-link">Enviar</button>
+                        {{csrf_field()}}
+                      <button class="button is-link" type="submit"> Enviar</button>
                   </div>
                 </div>
               </div>
+              </form>
             </article>
           </div>
         </div>

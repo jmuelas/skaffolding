@@ -14,12 +14,13 @@
 Route::get('/', function () {
     return view('index');
 });
-Route::get('/bio', function () {
+Route::get('bio', function () {
     return view('pages/biografia');
 });
-Route::get('/media', function () {
+Route::get('media', function () {
     return view('pages/media');
 });
-Route::get('/contacto', function () {
-    return view('pages/contacto');
+Route::get('contacto', function () {
+    return view('pages/contacto', ['nombre' => '', 'email' => '', 'mensaje' => '']);
 });
+Route::post('contacto', 'ContactoController@contactoByEmail');
