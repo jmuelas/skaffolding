@@ -3,7 +3,7 @@
 
 @import '~font-awesome';
 
-html { 
+html {
     background-color: #dbdbdb4f;
 /*    background-image: url('/images/skaffolding_foto.jpg');
     background-position: center;
@@ -11,30 +11,30 @@ html {
     background-attachment: fixed;
     background-size:  cover;*/
  }
- 
-.navbar { 
+
+.navbar {
     background-color: #ffed00;
  }
- 
-.navbar-item { 
+
+.navbar-item {
     color: #000000;
     font-weight: bold;
  }
- 
+
  #home-title {
     text-align: center;
-    font-size: 70px;   
+    font-size: 70px;
     font-weight: bold;
  }
  #flamunky {
      max-width: 100%;
-  
+
  }
- 
+
  #home-container {
      margin-top: 40px;
  }
- 
+
 #foto_index{
   background-image:url("/images/skaffolding_foto_pce.jpg");
   width:100%;

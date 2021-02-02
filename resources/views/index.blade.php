@@ -11,23 +11,22 @@
         <div class="columns is-centered">
           <div class="column is-three-quarters">
             <article class="message" id="panel">
-              <h1><strong>Crowdfunding primer EP</strong></h1>
+              <h1><strong>Primer EP</strong></h1>
               <p>
-                Nos encontramos ensayando para nuestro primer EP de estudio.
+                Nos encontramos preparando nuestro primer EP de estudio con Alfre Camarote a los mandos de la producción.
               </p>
-              <img src="/images/skaffolding_logo.png"> 
+              <img src="/images/skaffolding_logo.png">
               <p>
-                Temazos como 'Descalzo', 'Summer Time', 'Tormento de Rosas'
-                o los temas inéditos 'Punto de (no) retorno' y '¿Qué no valgo!', harán las delicias 
+                Temazos como 'Descalzo', 'Tormento de Rosas'
+                o los temas inéditos 'Punto de (no) retorno', 'Barrio Lunar' y '¿Qué no valgo!', harán las delicias
                 de los amantes de la <strong>#RumbaTrepidante</strong>
               </p>
-              <h2><a>¡PARTICIPA!</a></h2>
             </article>
           </div>
         </div>
       </div>
     </section>
-  
+
   </body>
 </html>
 <script src="{{ asset('js/app.js') }}"></script>

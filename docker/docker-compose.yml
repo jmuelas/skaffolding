@@ -1,0 +1,13 @@
+version: "3.7"
+services:
+  l7-nginx:
+    build: nginx
+    ports:
+      - 80:80
+    volumes:
+      - ../:/var/www/html
+  l7-php:
+    build: php
+    user: '1000:1000'
+    volumes:
+      - ../:/var/www/html

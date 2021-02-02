@@ -13,7 +13,6 @@ class ContactoController extends Controller
     */
   public function contactoByEmail(Request $request)
   {
-    // dd($contacto);
     $this->validate($request, [
       'nombre' => 'required',
       'email' => 'required|email',
@@ -29,7 +28,7 @@ class ContactoController extends Controller
     $contacto->mensaje = strip_tags($mensaje);
 
     $sent = $contacto->save();
-        
+
     return View('pages/contacto',
       [
         'response' => $sent,

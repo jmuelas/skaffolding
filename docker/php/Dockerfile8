@@ -1,0 +1,44 @@
+FROM php:8.0.0RC3-fpm
+
+RUN apt-get update && apt-get install -y \
+        git \
+        zip \
+        wget \
+        unzip \
+        libaio1 \
+        libonig-dev \
+        libpq-dev \
+    && docker-php-ext-install \
+        pcntl \
+        mbstring \
+        pdo_pgsql \
+        pdo_mysql
+
+#Install instantclient
+RUN curl https://download.oracle.com/otn_software/linux/instantclient/195000/instantclient-basic-linux.x64-19.5.0.0.0dbru.zip --output /tmp/instantclient-basic-linux.x64-19.5.0.0.0dbru.zip
+RUN curl https://download.oracle.com/otn_software/linux/instantclient/195000/instantclient-sdk-linux.x64-19.5.0.0.0dbru.zip --output /tmp/instantclient-sdk-linux.x64-19.5.0.0.0dbru.zip
+RUN unzip /tmp/instantclient-basic-linux.x64-19.5.0.0.0dbru.zip -d /usr/local/
+RUN unzip /tmp/instantclient-sdk-linux.x64-19.5.0.0.0dbru.zip -d /usr/local/
+RUN ln -s /usr/local/instantclient_19_5 /usr/local/instantclient
+
+RUN wget https://github.com/FriendsOfPHP/pickle/releases/download/v0.6.0/pickle.phar && mv pickle.phar /usr/local/bin/pickle
+RUN chmod +x /usr/local/bin/pickle
+#Enable instantclient
+
+RUN apt-get update && apt-get install -y \
+        libz-dev \
+        libzip-dev \
+    && docker-php-ext-install \
+        zip
+ 
+#RUN pickle install oci8
+ENV LD_LIBRARY_PATH /usr/local/instantclient/
+ENV ORACLE_HOME /usr/local/instantclient/
+RUN mkdir -p /usr/src/php/ext/oci8 && curl -fsSL https://pecl.php.net/get/oci8 | tar xvz -C "/usr/src/php/ext/oci8" --strip 1 &&  docker-php-ext-configure oci8 --with-oci8=instantclient,/usr/local/instantclient/ \ 
+&& docker-php-ext-install oci8
+
+#Install composer
+RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+
+#Install SOAP
+RUN rm /etc/apt/preferences.d/no-debian-php && apt-get update && apt-get install -y libxml2-dev php-soap && docker-php-ext-install soap
